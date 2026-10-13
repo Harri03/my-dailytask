@@ -1,0 +1,559 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #172554;
+  background: #f4f7ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.customer-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+          radial-gradient(circle at 10% 20%, #dce7ff 0, transparent 34%),
+          radial-gradient(circle at 90% 75%, #e8ddff 0, transparent 32%),
+          #f7f9ff;
+}
+
+/* HEADER */
+
+.customer-header {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e8f8;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: linear-gradient(135deg, #304ffe, #8b35e8);
+  border-radius: 15px;
+  font-size: 26px;
+  font-weight: 800;
+  box-shadow: 0 7px 18px #5145cd45;
+}
+
+.brand h2 {
+  margin: 0;
+  color: #172554;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.brand p {
+  margin: 5px 0 0;
+  color: #586b8d;
+  font-size: 12px;
+}
+
+.online-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1px solid #cbd8f5;
+  border-radius: 30px;
+  color: #263c70;
+  background: #f4f7ff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: #0eae75;
+  border-radius: 50%;
+}
+
+/* MAIN LAYOUT */
+
+.customer-main {
+  width: min(1100px, 90%);
+  flex: 1;
+  margin: 0 auto;
+  padding: 65px 0;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  align-items: center;
+  gap: 65px;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section {
+  max-width: 510px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 10px 14px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #304ffe, #783ce5);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  box-shadow: 0 5px 15px #5145cd25;
+}
+
+.welcome-section h1 {
+  margin: 23px 0 18px;
+  color: #14234b;
+  font-size: clamp(40px, 5vw, 58px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.welcome-section > p {
+  max-width: 470px;
+  color: #4c5e80;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.benefits {
+  display: grid;
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.benefit-icon {
+  width: 51px;
+  height: 51px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  border: 1px solid #dfe6fa;
+  border-radius: 15px;
+  font-size: 23px;
+  box-shadow: 0 7px 20px #253e7d12;
+}
+
+.benefit strong {
+  color: #172554;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.benefit p {
+  margin: 5px 0 0;
+  color: #536787;
+  font-size: 13px;
+}
+
+/* REGISTRATION AND TRACKING CARD */
+
+.registration-card {
+  min-width: 0;
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e0e7f7;
+  border-radius: 24px;
+  box-shadow: 0 25px 70px #263c781c;
+}
+
+.card-heading {
+  margin-bottom: 29px;
+  text-align: center;
+}
+
+.form-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #304ffe, #8b35e8);
+  border-radius: 15px;
+  font-size: 25px;
+  box-shadow: 0 7px 18px #5145cd35;
+}
+
+.form-label {
+  display: block;
+  color: #4b45d4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.card-heading h2 {
+  margin: 12px 0 9px;
+  color: #172554;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.card-heading p {
+  margin: 0;
+  color: #596b8a;
+  font-size: 14px;
+}
+
+/* FORM FIELDS */
+
+.registration-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-card label {
+  margin: 0 0 9px;
+  color: #24375d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.registration-card input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 23px;
+  padding: 0 14px;
+  border: 1px solid #d4def1;
+  border-radius: 10px;
+  outline: none;
+  background: #f9fbff;
+  color: #172554;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.registration-card input:focus {
+  border-color: #5865f2;
+  box-shadow: 0 0 0 4px #5865f21c;
+  background: #ffffff;
+}
+
+.registration-card input::placeholder {
+  color: #7888a6;
+}
+
+/* PHONE INPUT */
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 25px;
+  padding-left: 12px;
+  border: 1px solid #d4def1;
+  border-radius: 10px;
+  background: #f9fbff;
+}
+
+.phone-input:focus-within {
+  border-color: #5865f2;
+  box-shadow: 0 0 0 4px #5865f21c;
+  background: #ffffff;
+}
+
+.phone-input span {
+  flex-shrink: 0;
+  padding-right: 10px;
+  border-right: 1px solid #d4def1;
+  color: #263c70;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.phone-input input {
+  min-width: 0;
+  height: 46px;
+  margin: 0;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.phone-input input:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* JOIN QUEUE BUTTON */
+
+.join-button {
+  width: 100%;
+  min-height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  border-radius: 11px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #304ffe, #8139e8);
+  box-shadow: 0 9px 22px #5548d844;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.join-button span {
+  font-size: 21px;
+}
+
+.join-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 13px 27px #5548d855;
+}
+
+.join-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.join-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* CUSTOMER TOKEN */
+
+.token-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0;
+  padding: 22px 16px;
+  border: 1px dashed #b8c5ff;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f1f4ff, #f7f0ff);
+}
+
+.token-display span {
+  color: #536787;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.token-display strong {
+  color: #4937d4;
+  font-size: 54px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+/* LIVE QUEUE DETAILS */
+
+.tracking-details {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.tracking-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid #e5eaf3;
+  border-radius: 12px;
+  background: #f8faff;
+}
+
+.tracking-item span {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.tracking-item strong {
+  color: #172554;
+  font-size: 13px;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.success-panel > p:not(.success-message):not(.error-message) {
+  color: #596b8a;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.success-message {
+  margin: 18px 0;
+  color: #536787;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.error-message {
+  margin: 12px 0;
+  padding: 10px 12px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fff1f2;
+  color: #b91c1c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* PRIVACY AND FOOTER */
+
+.privacy-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: #536787;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.customer-footer {
+  padding: 22px 15px;
+  text-align: center;
+  border-top: 1px solid #e0e7f7;
+  color: #526585;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.customer-footer p {
+  margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+  .customer-main {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    gap: 42px;
+    padding: 45px 0;
+  }
+
+  .welcome-section {
+    max-width: 100%;
+  }
+
+  .welcome-section h1 {
+    font-size: 42px;
+  }
+
+  .benefits {
+    gap: 18px;
+    margin-top: 27px;
+  }
+}
+
+@media (max-width: 480px) {
+  .customer-header {
+    min-height: 75px;
+    padding: 0 5%;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 22px;
+  }
+
+  .brand h2 {
+    font-size: 19px;
+  }
+
+  .brand p {
+    font-size: 10px;
+  }
+
+  .online-status {
+    gap: 6px;
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .customer-main {
+    width: 90%;
+    padding: 35px 0;
+  }
+
+  .welcome-section h1 {
+    font-size: 37px;
+    letter-spacing: -1.3px;
+  }
+
+  .registration-card {
+    padding: 25px 20px;
+    border-radius: 18px;
+  }
+
+  .card-heading h2 {
+    font-size: 26px;
+  }
+
+  .token-display strong {
+    font-size: 46px;
+  }
+
+  .tracking-item {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .tracking-item span,
+  .tracking-item strong {
+    font-size: 12px;
+  }
+}
