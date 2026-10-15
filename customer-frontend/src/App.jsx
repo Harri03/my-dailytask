@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 // Backend URL accessible from your computer and phone on the same Wi-Fi.
-const API_URL = 'http://192.168.0.101:8080/api/queue'
+const API_URL = 'http://10.83.205.27:8080/api/queue'
 
 function App() {
     const [customerName, setCustomerName] = useState('')
